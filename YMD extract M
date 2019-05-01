@@ -1,0 +1,8 @@
+#Where df is arbitrary data frame, Month is name of new column, date is column containing YMD
+df <- df %?%
+  mutate(Month = month(date, label = True))
+
+#I want to generate a new column containing just the Month of collision
+#If mutate(Month = month(date, label = TRUE)) then Month will be the name of month rather than number
+bird_collisions <- bird_collisions %>%
+  mutate(Month = month(date, label = TRUE))
